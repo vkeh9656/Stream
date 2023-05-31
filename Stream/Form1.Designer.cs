@@ -32,6 +32,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.tboxConfigData = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.numData = new System.Windows.Forms.NumericUpDown();
             this.cboxData = new System.Windows.Forms.CheckBox();
             this.tboxData = new System.Windows.Forms.TextBox();
@@ -42,6 +43,12 @@
             this.btnConfigRead = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.btnSaveXML = new System.Windows.Forms.Button();
+            this.tboxConfigDataXML = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnConfigSetXML = new System.Windows.Forms.Button();
+            this.btnLoadXML = new System.Windows.Forms.Button();
+            this.btnConfigReadXML = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numData)).BeginInit();
             this.SuspendLayout();
@@ -77,6 +84,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Controls.Add(this.numData);
             this.groupBox1.Controls.Add(this.cboxData);
             this.groupBox1.Controls.Add(this.tboxData);
@@ -89,6 +97,13 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Config Setting";
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(282, 17);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(10, 100);
+            this.panel1.TabIndex = 6;
             // 
             // numData
             // 
@@ -165,11 +180,74 @@
             // 
             this.openFileDialog.FileName = "openFileDialog1";
             // 
+            // btnSaveXML
+            // 
+            this.btnSaveXML.Location = new System.Drawing.Point(446, 12);
+            this.btnSaveXML.Name = "btnSaveXML";
+            this.btnSaveXML.Size = new System.Drawing.Size(131, 23);
+            this.btnSaveXML.TabIndex = 6;
+            this.btnSaveXML.Text = "XML 저장하기";
+            this.btnSaveXML.UseVisualStyleBackColor = true;
+            this.btnSaveXML.Click += new System.EventHandler(this.btnSaveXML_Click);
+            // 
+            // tboxConfigDataXML
+            // 
+            this.tboxConfigDataXML.Enabled = false;
+            this.tboxConfigDataXML.Location = new System.Drawing.Point(310, 41);
+            this.tboxConfigDataXML.Multiline = true;
+            this.tboxConfigDataXML.Name = "tboxConfigDataXML";
+            this.tboxConfigDataXML.Size = new System.Drawing.Size(281, 119);
+            this.tboxConfigDataXML.TabIndex = 7;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.IndianRed;
+            this.panel2.Location = new System.Drawing.Point(286, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(18, 311);
+            this.panel2.TabIndex = 8;
+            // 
+            // btnConfigSetXML
+            // 
+            this.btnConfigSetXML.Location = new System.Drawing.Point(447, 176);
+            this.btnConfigSetXML.Name = "btnConfigSetXML";
+            this.btnConfigSetXML.Size = new System.Drawing.Size(144, 23);
+            this.btnConfigSetXML.TabIndex = 9;
+            this.btnConfigSetXML.Text = "Config 설정하기(XML)";
+            this.btnConfigSetXML.UseVisualStyleBackColor = true;
+            this.btnConfigSetXML.Click += new System.EventHandler(this.btnConfigSetXML_Click);
+            // 
+            // btnLoadXML
+            // 
+            this.btnLoadXML.Location = new System.Drawing.Point(310, 12);
+            this.btnLoadXML.Name = "btnLoadXML";
+            this.btnLoadXML.Size = new System.Drawing.Size(131, 23);
+            this.btnLoadXML.TabIndex = 10;
+            this.btnLoadXML.Text = "XML 읽어오기";
+            this.btnLoadXML.UseVisualStyleBackColor = true;
+            this.btnLoadXML.Click += new System.EventHandler(this.btnLoadXML_Click);
+            // 
+            // btnConfigReadXML
+            // 
+            this.btnConfigReadXML.Location = new System.Drawing.Point(310, 176);
+            this.btnConfigReadXML.Name = "btnConfigReadXML";
+            this.btnConfigReadXML.Size = new System.Drawing.Size(131, 23);
+            this.btnConfigReadXML.TabIndex = 11;
+            this.btnConfigReadXML.Text = "Config 가져오기";
+            this.btnConfigReadXML.UseVisualStyleBackColor = true;
+            this.btnConfigReadXML.Click += new System.EventHandler(this.btnConfigReadXML_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(295, 332);
+            this.ClientSize = new System.Drawing.Size(597, 332);
+            this.Controls.Add(this.btnConfigReadXML);
+            this.Controls.Add(this.btnLoadXML);
+            this.Controls.Add(this.btnConfigSetXML);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.tboxConfigDataXML);
+            this.Controls.Add(this.btnSaveXML);
             this.Controls.Add(this.btnConfigSet);
             this.Controls.Add(this.btnConfigRead);
             this.Controls.Add(this.groupBox1);
@@ -202,6 +280,13 @@
         private System.Windows.Forms.Button btnConfigRead;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.Button btnSaveXML;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox tboxConfigDataXML;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnConfigSetXML;
+        private System.Windows.Forms.Button btnLoadXML;
+        private System.Windows.Forms.Button btnConfigReadXML;
     }
 }
 
